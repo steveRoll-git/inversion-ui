@@ -125,10 +125,11 @@ function MenuState:drawMenu(menu)
   self:drawMenuItems(menu, 1)
   lg.pop()
 
-  lg.setLineStyle("rough")
-  lg.setLineWidth(1)
+  lg.setLineStyle("smooth")
+  lg.setLineWidth(0.5)
   lg.setColor(1, 1, 1)
-  lg.line(0, font:getHeight(), lg.getWidth(), font:getHeight())
+  local y = font:getHeight() - 0.5
+  lg.line(0, y, lg.getWidth(), y)
 end
 
 function MenuState:enterMenu()
