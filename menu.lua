@@ -224,6 +224,11 @@ function MenuState:draw()
     self:drawMenuItems(nextMenu, 1)
     popScissor()
     lg.pop()
+
+    lg.setLineStyle("smooth")
+    lg.setLineWidth(0.5)
+    lg.setColor(1, 1, 1, self.expandAnim)
+    lg.line(0, newY, lg.getWidth(), newY)
   else
     self:drawMenu(self:topMenu())
   end
