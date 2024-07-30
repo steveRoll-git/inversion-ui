@@ -154,6 +154,10 @@ function MenuState:update(dt)
 end
 
 function MenuState:keypressed(_, sc)
+  if self.expandAnim then
+    return
+  end
+
   local menu = self:topMenu()
   local prevIndex = menu.selection
   if sc == "up" then
