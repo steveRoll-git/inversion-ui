@@ -55,7 +55,15 @@ local menuData = {
           }
         },
         {
-          title = "Sound"
+          title = "Sound",
+          items = {
+            {
+              title = "Music Volume"
+            },
+            {
+              title = "SFX Volume"
+            },
+          }
         },
         {
           title = "Controls"
